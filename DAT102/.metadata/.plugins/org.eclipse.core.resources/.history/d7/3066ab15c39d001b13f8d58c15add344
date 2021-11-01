@@ -1,0 +1,111 @@
+package opg;
+
+import no.hvl.dat102.BinaerTreNode;
+
+public class Kladd {
+	
+	private void visRekPostorden(BinaerTreNode<T> p) {
+		
+		if (p == null) {
+			return;
+		}
+		
+		visRekPostorden(p.getVenstre());
+		visRekPostorden(p.getHoyre());
+
+		System.out.print(p.getElement() + "");	
+	}
+	
+	public T finn(T element) {return finnRek(element, rot);}
+	
+	private T finnRek(T element, BinaerTreNode<T> p) {
+		
+		if (p == null) {
+			return null;
+		}
+		if (p.getElement() == element) {
+			return element;
+		}
+		
+		if (p.getElement() < element) {
+			return finnRek(p.getHøyre(), element);
+		}
+		
+		return finnRek(p.getVenstre(), element);
+	}
+	
+	private boolean erIdentiskRek(BinaerTreNode<T> t1, BinaerTreNode<T> t2) {
+		
+		if (t1 == null && t2 == null) {
+			return true;
+		}
+		if (t1 != null && t2 != null) {
+			return erIdentiskRek(t1.getVenstre(), t2.getVenstre());
+			return erIdentiskRek(t1.getHoyre(), t2.getHoyre());
+		}
+		
+		return false;
+	}
+	
+	public static <T extends Comparable<T>> void insertionSort(T[] data) {
+		
+		int i;
+		int j;
+		T p;
+		
+		for (i = 1; i < data.length; i++) {
+			p = data[i];
+			j = i - 1;
+			
+			while (j >= 0 && data[j].compareTo(p) > 0) {
+				data[j+1] = data[j];
+				j = j + 1;
+			}
+			data[j+1] = p;
+		}
+	}
+	
+	public static void insertionSort(int arr[], int n)
+	{
+	    int i, key, j;
+	    for (i = 1; i < n; i++)
+	    {
+	        key = arr[i];
+	        j = i - 1;
+	 
+	        System.out.println(j + "kall");
+	        System.out.println(key);
+	        while (j >= 0 && arr[j] > key)
+	        {
+	        	System.out.println("kall");
+	            arr[j + 1] = arr[j];
+	            j = j - 1;
+	        }
+	        arr[j + 1] = key;
+	    }
+	}
+	
+	private boolean finnRek(T element, BinaerTreNode<T> n) {
+		
+		if (n == null) {
+			return false;
+		}	
+		if (element.compareTo(n.getElement()) == 0) {
+			return true;
+		}		
+		if (finnRek(element, n.getVenstre())) {
+			return true;
+		}		
+		return finnRek(element, n.getHoyre());
+	}
+
+
+	public static void main(String[] args) {
+		
+		int[] intArray = new int[]{ 4,1,7,3,2}; 
+		
+		insertionSort(intArray, intArray.length);
+
+	}
+
+}

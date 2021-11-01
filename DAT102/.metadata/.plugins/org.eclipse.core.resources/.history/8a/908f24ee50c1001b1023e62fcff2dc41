@@ -1,0 +1,61 @@
+package opg4;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		BinaerTre tre1 = new BinaerTre();
+		BinaerTre tre2 = new BinaerTre();
+					
+		tre1.lagEksempelTre_1();	
+		tre2.lagEksempelTre_2();
+		
+		BinaerTreNode tre3rot = new BinaerTreNode(4);
+		
+		BinaerTre tre3 = new BinaerTre(tre1, tre2, 4);
+		
+		int sokTall = 1;
+		
+		//Tre 1 
+		System.out.print("Tre 1:");
+		
+			tre2.visInOrden();
+			tre2.visPreOrden();
+			tre2.visPostOrden();
+			tre2.visReversInOrden();
+			tre2.visNivOrden();
+			
+			System.out.println("\nHøyde: " + tre1.hoyde());
+			System.out.println("Sum: " + tre1.sum());
+			//System.out.println("Fins " + sokTall + "? "+ tre1.finnes(sokTall));
+		//Tre 2
+		System.out.println("Tre 2:");
+		
+			tre2.visInOrden();
+			tre2.visPreOrden();			
+			tre2.visPostOrden();
+			tre2.visReversInOrden();
+			tre2.visNivOrden();
+		
+			System.out.println("\nHøyde: " + tre2.hoyde());
+			System.out.println("Sum: " + tre2.sum());
+			//System.out.println("Fins " + sokTall + "? "+ tre2.finnes(sokTall));
+			
+		//Tre 3
+		System.out.println("Tre 3:");
+		
+		
+			tre3.visInOrden();
+			tre3.visPreOrden();			
+			tre3.visPostOrden();
+			tre3.visReversInOrden();
+			tre3.visNivOrden();
+			
+			System.out.println("\nHøyde: " + tre3.hoyde());
+			System.out.println("Sum: " + tre3.sum());
+			//System.out.println("Fins " + sokTall + "? "+ tre2.finnes(sokTall));
+
+	}
+
+}
