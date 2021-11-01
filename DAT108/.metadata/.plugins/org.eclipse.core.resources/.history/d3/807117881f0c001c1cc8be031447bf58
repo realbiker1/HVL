@@ -1,0 +1,23 @@
+package hvl.no;
+
+public class Burger {
+	
+	int burgerNr = 1;
+
+	public Burger() {
+		burgerNr++;
+	}
+
+	public int getBurgerNr() {
+		return burgerNr;
+	}
+
+	public void setBurgerNr(int burgerNr) {
+		this.burgerNr = burgerNr;
+	}
+	
+	public String toString() {
+		String s = "(|" + burgerNr + "|)";
+	}
+
+}

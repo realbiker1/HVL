@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d5b54613-377a-4b1b-9e58-6742d661c8c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/Oblig 2 - Del 1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/src/opg1/Opg1a.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/src/opg1/Opg1b.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/src/opg2/Ansatt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/src/opg2/Kjonn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/src/opg2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/src/opg3/Ansatt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/src/opg3/Kjonn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oblig 2 - Del 1/src/opg3/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1yQLELeaXgF5LPMn8A41fjablIF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Oblig 2 - Del 1/src" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Adrian\Documents\Koding\Git\DAT108\Obligs\Oblig 2 - Del 1\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5b54613-377a-4b1b-9e58-6742d661c8c1" name="Changes" comment="" />
+      <created>1632178754041</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632178754041</updated>
+      <workItem from="1632178756229" duration="81000" />
+      <workItem from="1632922462342" duration="154000" />
+      <workItem from="1632924398417" duration="604000" />
+      <workItem from="1633182862718" duration="94000" />
+      <workItem from="1633182963102" duration="95000" />
+      <workItem from="1633183370608" duration="44000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

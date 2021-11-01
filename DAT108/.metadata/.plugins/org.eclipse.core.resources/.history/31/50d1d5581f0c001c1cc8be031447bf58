@@ -1,0 +1,83 @@
+package hvl.no;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class HamburgerBrett {
+	
+	private int antBurgere;
+	private int kapasitet;
+	private Queue<String> brett;
+	
+	public HamburgerBrett(int kapasitet) {
+		brett = new LinkedList<String>();
+		this.kapasitet = kapasitet;
+		antBurgere = 0;
+	}
+	
+	public boolean addBurger(String burger) {
+		
+		if (antBurgere < kapasitet) {
+			brett.add(burger);
+			antBurgere++;
+			return true;
+		} else {
+			System.out.println("Brettet er fullt!");
+			return false;
+		}	
+	}
+	
+	public boolean removeBurger() {
+		
+		if (!erTom()) {
+			brett.remove();
+			antBurgere--;
+			return true;
+		} else {
+			System.out.println("Brettet er tomt, ingen burger fjernet!");
+			return false;
+		}	
+	}
+	
+	public boolean erTom() {
+		
+		if (antBurgere == 0) {
+			return true;
+		} else {
+			return false;
+		}	
+	}
+	
+	public int getAntBurgere() {
+		return this.antBurgere;
+	}
+
+	public void printBrett() {
+		
+		String s = " Brett: [ ";
+		boolean siste = false;
+		int i = 1;
+		
+		for(String element : brett) {
+			
+			if (i >= antBurgere) {
+				siste = true;
+			}
+			
+			if(!siste) {
+			s += element + ", ";
+			} else {
+			s += element;
+			}
+			i++;
+		}
+		System.out.print(s + " ]\n");	
+	}
+
+	public String getNeste() {
+		return brett.peek();
+	}
+	
+	
+
+}

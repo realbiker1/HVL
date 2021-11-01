@@ -1,0 +1,22 @@
+package hvl.no;
+
+public class Main {
+	
+	public static void main(String... blablabla) {
+		
+		final String[] kokker = {"Hellstrøm", "Ramsay", "Oliver"};
+		final String[] servitorer = {"Nils", "Lise"};
+		final int KAPASITET= 4;
+		
+		//skrivUtHeader(kokker, servitorer, KAPASITET);
+		
+		HamburgerBrett brett = new HamburgerBrett(KAPASITET);
+		
+		for(String navn : kokker) {
+			new Kokk(brett, navn).start();
+		}
+		for(String navn : servitorer) {
+			new Servitor(brett, navn).start();
+		}
+	}
+}

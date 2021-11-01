@@ -1,0 +1,43 @@
+package hvl.no;
+
+public class Servitor extends Thread {
+	
+	private HamburgerBrett brett;
+	private String navn;
+	
+	public Servitor(HamburgerBrett brett, String navn) {
+		this.brett = brett;
+		this.navn = navn;
+	}
+	
+	@Override
+	public void run() {
+		
+		while(true) {
+			synchronized(brett) {
+				while(brett.erTom()) {
+					try {
+						brett.wait();
+						System.out.println(navn + " (servitør) ønsker å ta av hamburger, men brettet er tomt. Venter!");
+					} catch (InterruptedException e) {
+					}
+				}
+				try {
+					sleep(600);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				String burgerString = brett.getNeste();
+				brett.removeBurger();
+				printHandling(burgerString);
+				brett.notifyAll();
+			}			
+		}
+	}	
+
+	private void printHandling(String burgerStr) {
+		System.out.print(navn + " (servitør) tar av hamburger " + burgerStr + ".");
+		brett.printBrett();
+	}
+
+}

@@ -1,0 +1,48 @@
+package hvl.no;
+
+import java.util.Random;
+
+public class Servitor extends Thread {
+	
+	private HamburgerBrett brett;
+	private String navn;
+	
+	public Servitor(HamburgerBrett brett, String navn) {
+		this.brett = brett;
+		this.navn = navn;
+	}
+	
+	@Override
+	public void run() {
+		
+		while (true) {
+						
+			try {
+				
+				int random = new Random().nextInt(6 - 2 + 1) + 2;
+				Thread.sleep(random * 1000);
+				synchronized(brett) {
+					
+					while (brett.erTom()) {
+						try {
+							System.out.println(navn + " (servitør) ønsker å ta av hamburger, men brettet er tomt. Venter!");
+							brett.wait();
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+				}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			String s = brett.getNeste().toString();
+			brett.removeBurger();
+			printHandling(s);
+		}			
+	}
+		
+	private void printHandling(String burgerStr) {
+		System.out.println(navn + " (servitør) tar av hamburger " + burgerStr + ". " + brett.toString());
+	}
+
+}

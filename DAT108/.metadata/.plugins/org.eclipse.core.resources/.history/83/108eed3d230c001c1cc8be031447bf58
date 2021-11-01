@@ -1,0 +1,44 @@
+package hvl.no;
+
+	public class Kokk extends Thread {
+	
+	private HamburgerBrett brett;
+	private String navn;
+	
+	public Kokk(HamburgerBrett brett, String navn) {
+		this.brett = brett;
+		this.navn = navn;
+	}
+	
+	@Override
+	public void run() {
+		
+		while (true) {
+			
+			Burger hamburger = new Burger();
+			hamburger.setBurgerNr(hamburger.getBurgerNr()+1);
+			
+			synchronized(brett) {
+				while(brett.getAntBurgere() == 4) {
+					try {
+						brett.wait();
+					} catch (InterruptedException e) {
+					}
+				}
+				try {
+					sleep(600);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				brett.addBurger(hamburger);
+				printHandling(hamburger);
+				brett.notifyAll();
+			}			
+		}
+	}
+	
+	private void printHandling(Burger hamburger) {
+		System.out.print(navn + " (kokk) legger på hamburger " + hamburger.toString() + ".");
+		brett.printBrett();		
+	}
+}

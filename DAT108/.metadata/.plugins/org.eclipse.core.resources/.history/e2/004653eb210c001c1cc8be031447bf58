@@ -1,0 +1,24 @@
+package hvl.no;
+
+public class Burger {
+	
+	public int burgerID = 0;
+
+	public Burger() {
+		this.burgerID = burgerID + 1;
+		System.out.println(burgerID);
+	}
+
+	public int getBurgerNr() {
+		return burgerID;
+	}
+
+	public void setBurgerNr(int burgerNr) {
+		this.burgerID = burgerNr;
+	}
+	
+	public String toString() {
+		return "(|" + burgerID + "|)";
+	}
+
+}

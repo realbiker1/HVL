@@ -1,0 +1,28 @@
+package hvl.no;
+
+public class Burger {
+	
+	public int burgerID;
+
+	public Burger(int burgerID) {
+		this.burgerID = burgerID;
+		System.out.println(burgerID);
+	}
+
+	public Burger(int totBurgere) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getBurgerNr() {
+		return burgerID;
+	}
+
+	public void setBurgerNr(int burgerNr) {
+		this.burgerID = burgerNr;
+	}
+	
+	public String toString() {
+		return "(|" + burgerID + "|)";
+	}
+
+}

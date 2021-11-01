@@ -1,0 +1,95 @@
+package hvl.no;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class HamburgerBrett {
+	
+	private int antBurgere;
+	private int totBurgere;
+	private int kapasitet;
+	private Queue<Burger> brett;
+	
+	public HamburgerBrett(int kapasitet) {
+		brett = new LinkedList<Burger>();
+		this.kapasitet = kapasitet;
+		antBurgere = 0;
+		totBurgere = 0;
+	}
+	
+	public boolean addBurger() {
+		
+		if (antBurgere < kapasitet) {
+			Burger hamburger = new Burger(getTotBurgere() + 1);
+			brett.add(hamburger);
+			antBurgere++;
+			totBurgere++;
+			return true;
+		} else {
+			System.out.println("Brettet er fullt!");
+			return false;
+		}	
+	}
+	
+	public boolean removeBurger() {
+		
+		if (!erTom()) {
+			brett.remove();
+			antBurgere--;
+			return true;
+		} else {
+			System.out.println("Brettet er tomt, ingen burger fjernet!");
+			return false;
+		}	
+	}
+	
+	public boolean erTom() {
+		
+		if (antBurgere == 0) {
+			return true;
+		} else {
+			return false;
+		}	
+	}
+	
+	public int getAntBurgere() {
+		return this.antBurgere;
+	}
+	
+	public int getTotBurgere() {
+		return totBurgere;
+	}
+
+	public void setTotBurgere(int totBurgere) {
+		this.totBurgere = totBurgere;
+	}
+
+	public String toSdstring() {
+		
+		String s = " Brett: [ ";
+		boolean siste = false;
+		int i = 1;
+		
+		for(Burger element : brett) {
+			
+			if (i >= antBurgere) {
+				siste = true;
+			}
+			
+			if(!siste) {
+			s += element + ", ";
+			} else {
+			s += element;
+			}
+			i++;
+		}
+		System.out.print(s + " ]\n");	
+	}
+
+	public Burger getNeste() {
+		return brett.peek();
+	}
+	
+	
+
+}
